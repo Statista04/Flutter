@@ -13,3 +13,10 @@ script:
 cache:
   directories:
     - $HOME/.pub-cache
+
+install:
+  - |
+    if [ ! -d flutter ] ; then
+      git clone https://github.com/flutter/flutter.git -b beta
+    fi
+  - ./flutter/bin/flutter doctor
